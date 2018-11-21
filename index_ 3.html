@@ -8,8 +8,7 @@
 
 <div class="slider-wrapper">
 	<div class="slider-track">
-		gi
-
+		
 		<div class="slide__item" style="background-image: url('./image/rundom_photo1.jpg');">
 		
 		</div>
@@ -81,8 +80,8 @@ let startX = '';
 let startY = '';
 
 
-const DELIM = 10;
-const MASSA = 300;
+let DELIM = 10;
+let MASSA = 300;
 
 
 
@@ -161,6 +160,35 @@ document.body.addEventListener('mouseup', function(event) {
 
 </script>
 
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.3/dat.gui.js"></script>
+<script type="text/javascript">
+    
+var FizzyText = function() {
+  this.message = 'Введите скорость';
+  this.speed = 300;
+  this.fading = 10;
+  this.explode = function() { 
+
+  	MASSA = this.speed;
+  	DELIM = this.fading;
+ 
+  };
+ 
+};
+
+window.onload = function() {
+  var text = new FizzyText();
+  var gui = new dat.GUI();
+  gui.add(text, 'message');
+  gui.add(text, 'fading', 2, 20);
+  gui.add(text, 'speed', 100, 1000);
+  
+  gui.add(text, 'explode');
+};
+    
+</script>
 
 </body>
 </html>
