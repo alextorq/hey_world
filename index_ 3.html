@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first title</title>
+</head>
+<body>
+
+
+<div class="slider-wrapper">
+	<div class="slider-track">
+		gi
+
+		<div class="slide__item" style="background-image: url('./image/rundom_photo1.jpg');">
+		
+		</div>
+		<div class="slide__item" style="background-image: url('./image/rundom_photo2.jpg');">
+			
+		</div>
+		<div class="slide__item" style="background-image: url('./image/rundom_photo3.jpg');">
+			
+		</div> 
+		<div class="slide__item" style="background-image: url('./image/rundom_photo4.jpg');">
+			
+		</div>
+	</div>
+</div>
+
+
+<style>
+	
+	.slider-track {
+		display: flex;
+		
+		transition: all 0.2s linear;
+		will-change: transform;
+		width: 400vw;
+	}
+	.slider-wrapper {
+		overflow: hidden;
+	}
+	
+	.slide__item {
+		width: 100vw;
+		height: 80vh;
+		-webkit-flex-shrink: 0;
+		        flex-shrink: 0;
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+		    -ms-user-select: none;
+		        user-select: none;
+				background-repeat: no-repeat;
+		        background-size: cover;
+		background-position: center;
+	}
+	
+	.slide__item img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+		    -ms-user-select: none;
+		        user-select: none;
+	}
+	body {
+		height: 100vh;
+	}
+</style>
+
+
+
+<script>
+
+let slider = document.querySelector('.slider-track');
+
+
+let startTime = '';
+
+
+let startX = '';
+let startY = '';
+
+
+const DELIM = 10;
+const MASSA = 300;
+
+
+
+
+
+let pulse = '';
+
+
+let switchX = 0;
+
+let maxWidth = window.innerWidth * 3;
+
+function iner() {
+
+
+	pulse = pulse - (pulse / 100) * DELIM;
+	
+	switchX = switchX + pulse;
+
+	let max = '';
+
+	if (pulse > 0) {
+		max = Math.min(switchX, maxWidth);
+
+	}else {
+
+		max = Math.max(switchX, 0);
+	}
+
+	max = Math.floor(max);
+
+
+
+	slider.style.transform = `translate3d(-${max}px, 0 , 0)`;
+
+	if (Math.abs(pulse) > 0.5) {
+		window.requestAnimationFrame(iner)
+	}
+
+}
+
+
+
+
+
+document.body.addEventListener('mousedown', function(event) {
+	startX = event.pageX;
+	
+	startTime = performance.now();
+
+})
+
+
+
+document.body.addEventListener('mouseup', function(event) {
+
+	let curentTime = performance.now();
+
+	let time = Math.floor(curentTime - startTime);
+
+	let X = event.pageX;
+
+
+	let lastX = startX - X;
+	
+
+	pulse = (lastX / time) * MASSA;
+
+	iner();
+
+
+});
+
+
+
+
+</script>
+
+
+</body>
+</html>
