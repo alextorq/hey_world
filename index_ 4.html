@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first title</title>
+</head>
+<body>
+
+	<h1 data-text="Don`t panic">Don`t panic</h1>
+
+
+
+
+
+
+<style media="screen">
+
+
+	body{
+		margin:0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		background: #40AEBF;
+	}
+
+
+	h1 {
+		position: relative;
+		/* color: #40AEBF; */
+		color: white;
+		font-size: 15em;
+
+		margin-top: 0;
+		margin-bottom: 0;
+
+
+		text-shadow: 1px 1px 4px #979494;
+	}
+
+h1::after, h1::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: attr(data-text);
+	color: inherit;
+	transition: 0.5s;
+	will-change: transform;
+}
+
+
+h1:hover::after {
+	transform: translate(2%, -2%);
+}
+
+h1:hover::before {
+	transform: translate(1%, -1%);
+}
+
+
+</style>
+
+
+
+</body>
+</html>
