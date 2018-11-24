@@ -80,8 +80,8 @@ let startX = '';
 let startY = '';
 
 
-let DELIM = 10;
-let MASSA = 300;
+let DELIM = 2;
+let MASSA = 80;
 
 
 
@@ -111,13 +111,14 @@ function iner() {
 		max = Math.max(switchX, 0);
 	}
 
-	max = Math.floor(max);
+	// max = Math.floor(max);
+	
 
 
 
 	slider.style.transform = `translate3d(-${max}px, 0 , 0)`;
 
-	if (Math.abs(pulse) > 0.5) {
+	if (Math.abs(pulse) > 0.5 && Math.abs(pulse) < maxWidth) {
 		window.requestAnimationFrame(iner)
 	}
 
@@ -167,8 +168,8 @@ document.body.addEventListener('mouseup', function(event) {
     
 var FizzyText = function() {
   this.message = 'Введите скорость';
-  this.speed = 300;
-  this.fading = 10;
+  this.speed = MASSA;
+  this.fading = DELIM;
   this.explode = function() { 
 
   	MASSA = this.speed;
@@ -182,8 +183,8 @@ window.onload = function() {
   var text = new FizzyText();
   var gui = new dat.GUI();
   gui.add(text, 'message');
-  gui.add(text, 'fading', 2, 20);
-  gui.add(text, 'speed', 100, 1000);
+  gui.add(text, 'fading', 0.1, 20);
+  gui.add(text, 'speed', 0, 600);
   
   gui.add(text, 'explode');
 };
