@@ -1,0 +1,45 @@
+.map {
+	width: 1039px;
+	position: relative;
+	margin: 0 auto;
+}
+svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.hover {
+	fill: transparent;
+	cursor: pointer;
+}
+.hover:hover {
+	fill: purple;
+	opacity: 0.6;
+}
+img {
+	width: 100%;
+}
+#note {
+	position: absolute;
+	/*width: 300px;*/
+	padding: 20px;
+	color: white;
+	background: orange;
+	text-align: center;
+	opacity: 0;
+}
+#note.active {
+	opacity: 1;
+}
+#note:after {
+	content: '';
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border: 15px solid transparent;
+	bottom: -15px;
+	left: 50%;
+	transform: translateY(15px); rotate(180deg);
+	border-top: 15px solid orange;
+	/*border-right: 15px solid orange;*/
+}
