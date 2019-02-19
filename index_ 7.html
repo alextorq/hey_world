@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first title</title>
+	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="top number_wrapper">
+			<div class="bg_wrapper">
+				<div class="number_top ">01</div>
+			</div>
+		</div>
+		<div class="bottom number_wrapper">
+			<div class="number_bottom">01</div>
+		</div>
+	</div>
+
+
+	<style>
+		body {
+			height: 100vh;
+			padding: 0;
+			margin: 0;
+			font-family: 'VT323', monospace;
+			overflow: hidden;
+		}
+
+		.wrapper {
+			position: relative;
+			height: 100%;
+		}
+
+		.number_wrapper {
+
+			font-size: 150px;
+			font-weight: 400;
+			overflow: hidden;
+			height: 100%;
+		}
+
+
+		.bottom {
+			background: white;
+			color: black;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.top {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			z-index: 2;
+			height: 100%;
+			
+		}
+		.number_top {
+			width: 100vw;
+			height: 100vh;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+		}
+
+		.bg_wrapper {
+			background: black;
+			width: 100%;
+			height: 100%;
+		}
+
+		.active {
+			width: 0%;
+			transition: all 10s cubic-bezier(0.645, 0.045, 0.355, 1);
+			overflow: hidden;
+		}
+
+	</style>
+
+	<script>
+		let firstNumber = document.querySelector('.number_top');
+		let secondNumber = document.querySelector('.number_bottom');
+		let firsNumberWrapper = document.querySelector('.bg_wrapper');
+		let count = 1;
+		let timeMark;
+
+		document.body.addEventListener('click', function () {
+			timeMark = setInterval(() => {
+				if (count === 1) {
+					firsNumberWrapper.classList.add('active')
+				}
+
+				if (count <= 100) {
+					 firstNumber.innerHTML = count;
+					 secondNumber.innerHTML = count;
+				}else {
+					clearInterval(timeMark)
+				}
+
+				count++;
+
+			}, 100)
+		});
+	</script>
+
+</body>
+</html>

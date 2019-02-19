@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first title</title>
+</head>
+<body>
+	<div>
+		<p class="first"><span>Hey</span></p>
+		<p class="second"><span>World</span></p>
+	</div>
+
+
+<style>
+	body{
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #000;
+		min-height: 100vh;
+		color: white;
+		font-size: 40px;
+        flex-direction: column;
+
+	}
+	div {
+		text-align: center;
+	}
+	p {
+	  margin: 0;
+	}
+	p {
+		position: relative;
+		padding: 0 20px;
+	}
+	p::after {
+		content: '';
+		position: absolute;
+		height: 4px;
+		background: #FFF;
+		left: 0;
+		top: 50%;
+		transform: translateY(50%);
+        
+	}
+
+	.active p::after {
+		animation: slide 2s forwards;
+	}
+
+	.active .second::after {
+        animation-delay: 1s;
+	}
+	span {
+		opacity: 0;
+		transition: all 4s;
+		display: inline-block;
+	}
+
+	.active span {
+		opacity: 1;
+	}
+	.second span {
+        transition-delay: 1s;
+	}
+
+@keyframes slide {
+	0% { 
+		left: 0; 
+		right: 100%;
+	}
+	50% {
+		right: 0;
+		left: 0;
+	}
+	100% { 
+		right: 0;
+		left: 100%;
+	 }
+}
+
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		setTimeout(function (argument) {
+			document.querySelector('div').classList.add('active')
+		}, 1000) 
+		
+	});
+</script>
+
+</body>
+
+</html>
