@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="60ae3c4f-67fe-4ef0-9a12-d55ee785cb59" name="Default" comment="css is awesome letter-spacing" />
+    <list default="true" id="60ae3c4f-67fe-4ef0-9a12-d55ee785cb59" name="Default" comment="css is awesome letter-spacing add file" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index_ 6.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="448">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -73,7 +73,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -85,6 +84,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -135,6 +135,7 @@
       <workItem from="1550593965542" duration="65000" />
       <workItem from="1551113431514" duration="11000" />
       <workItem from="1555421316677" duration="38000" />
+      <workItem from="1555421400029" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="hey">
       <created>1542828980329</created>
@@ -199,17 +200,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555421345364</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="css is awesome letter-spacing add file">
+      <created>1555421427788</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555421427788</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2176000" />
+    <option name="totallyTimeSpent" value="2212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1922" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24881391" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24881391" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -220,9 +228,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32952183" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32890704" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32848233" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3278856" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -239,7 +247,8 @@
     <MESSAGE value="add element to center" />
     <MESSAGE value="add appearance text animation" />
     <MESSAGE value="css is awesome letter-spacing" />
-    <option name="LAST_COMMIT_MESSAGE" value="css is awesome letter-spacing" />
+    <MESSAGE value="css is awesome letter-spacing add file" />
+    <option name="LAST_COMMIT_MESSAGE" value="css is awesome letter-spacing add file" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Загрузки/Telegram Desktop/Sidebar.vue" />
@@ -265,8 +274,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index_ 6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="448">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
