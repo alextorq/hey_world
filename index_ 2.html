@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first title</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+	
+
+	<div class="wrapper">
+		<div class="text">Hey World</div>
+	</div>
+</body>
+
+
+<style>
+	* {
+		box-sizing: border-box;
+		font-family: 'Roboto Mono', monospace;
+	}
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+	}
+	.text {
+		font-size: 90px;
+		color: grey;
+		position: relative;
+		color: transparent;
+	
+	}
+	.text:hover:after {
+		animation-name: text;
+		animation-duration: 1.5s;
+		animation-timing-function: steps(9, end);
+	}
+	.text:after {
+		position: absolute;
+		left: 0;
+		width: 0;
+		bottom: 0;
+		top: 0;
+		content: 'Hey World';
+		color: black;
+		overflow: hidden;
+		white-space: nowrap;
+		animation-fill-mode: forwards;
+	}
+	@keyframes text {
+		0% {
+			width: 0%;
+		}
+		100% {
+			width: 100%;
+		}
+	}
+</style>
+</html>
